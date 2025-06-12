@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#317EFB"/>
+  <link rel="manifest" href="manifest.json">
+  <title>Language Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Mandarin Flashcards</h1>
+    <div id="flashcard" class="card">
+      <div class="front"></div>
+      <div class="back"></div>
+    </div>
+    <button onclick="nextCard()">Next</button>
+    <button onclick="speakWord()">🔊</button>
+
+    <div id="quiz">
+      <p id="question"></p>
+      <div id="choices"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
