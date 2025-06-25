@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['flashcards.py'],
+    ['mainapp\\flashcards.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('mainapp/flashcards.json', 'mainapp'), ('mainapp/stats.json', 'mainapp')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -29,7 +29,7 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,

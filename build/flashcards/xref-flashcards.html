@@ -15,7 +15,7 @@
 
 <div class="node">
   <a name="flashcards.py"></a>
-  <a target="code" href="///C:/Users/krato/OneDrive/Software%20Task%203/flashcards.py" type="text/plain"><tt>flashcards.py</tt></a>
+  <a target="code" href="///C:/Users/krato/OneDrive/Software%20Task%203/mainapp/flashcards.py" type="text/plain"><tt>flashcards.py</tt></a>
 <span class="moduletype">Script</span>  <div class="import">
 imports:
     <a href="#_collections_abc">_collections_abc</a>
@@ -169,6 +169,7 @@ imports:
  &#8226;   <a href="#pyi_rth_pywintypes.py">pyi_rth_pywintypes.py</a>
  &#8226;   <a href="#pyi_rth_setuptools.py">pyi_rth_setuptools.py</a>
  &#8226;   <a href="#pyttsx3">pyttsx3</a>
+ &#8226;   <a href="#quiz">quiz</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#re._casefix">re._casefix</a>
@@ -180,7 +181,9 @@ imports:
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
  &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#warnings">warnings</a>
@@ -4197,6 +4200,8 @@ imported by:
  &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
  &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
  &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
  &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
  &#8226;   <a href="#comtypes.patcher">comtypes.patcher</a>
@@ -4243,6 +4248,8 @@ imported by:
  &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
  &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
  &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
  &#8226;   <a href="#comtypes.server">comtypes.server</a>
  &#8226;   <a href="#comtypes.stream">comtypes.stream</a>
@@ -4589,6 +4596,8 @@ imported by:
  &#8226;   <a href="#comtypes.client._managing">comtypes.client._managing</a>
  &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
  &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
  &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
  &#8226;   <a href="#comtypes.server">comtypes.server</a>
@@ -4921,10 +4930,11 @@ imported by:
 
 <div class="node">
   <a name="comtypes.gen"></a>
-  <a target="code" href="" type="text/plain"><tt>comtypes.gen</tt></a>
-<span class="moduletype">MissingModule</span>  <div class="import">
+  <a target="code" href="///C:/Users/krato/AppData/Roaming/Python/Python313/site-packages/comtypes/gen/__init__.py" type="text/plain"><tt>comtypes.gen</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
 imports:
     <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.gen.SpeechLib">comtypes.gen.SpeechLib</a>
 
   </div>
   <div class="import">
@@ -4933,7 +4943,76 @@ imported by:
  &#8226;   <a href="#comtypes.client">comtypes.client</a>
  &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
  &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
+ &#8226;   <a href="#comtypes.gen.SpeechLib">comtypes.gen.SpeechLib</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#pyttsx3.drivers.sapi5">pyttsx3.drivers.sapi5</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.gen.SpeechLib"></a>
+  <a target="code" href="///C:/Users/krato/AppData/Roaming/Python/Python313/site-packages/comtypes/gen/SpeechLib.py" type="text/plain"><tt>comtypes.gen.SpeechLib</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
+ &#8226;   <a href="#enum">enum</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#pyttsx3.drivers.sapi5">pyttsx3.drivers.sapi5</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0"></a>
+  <a target="code" href="///C:/Users/krato/AppData/Roaming/Python/Python313/site-packages/comtypes/gen/_00020430_0000_0000_C000_000000000046_0_2_0.py" type="text/plain"><tt>comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4"></a>
+  <a target="code" href="///C:/Users/krato/AppData/Roaming/Python/Python313/site-packages/comtypes/gen/_C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4.py" type="text/plain"><tt>comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#comtypes">comtypes</a>
+ &#8226;   <a href="#comtypes.GUID">comtypes.GUID</a>
+ &#8226;   <a href="#comtypes.automation">comtypes.automation</a>
+ &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.stream">comtypes.stream</a>
+ &#8226;   <a href="#comtypes.typeinfo">comtypes.typeinfo</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#comtypes.gen.SpeechLib">comtypes.gen.SpeechLib</a>
 
   </div>
 
@@ -5089,6 +5168,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#comtypes.client">comtypes.client</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
 
   </div>
 
@@ -5437,6 +5517,7 @@ imported by:
  &#8226;   <a href="#comtypes.client._generate">comtypes.client._generate</a>
  &#8226;   <a href="#comtypes.client._managing">comtypes.client._managing</a>
  &#8226;   <a href="#comtypes.client.lazybind">comtypes.client.lazybind</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
  &#8226;   <a href="#comtypes.tools.codegenerator.codegenerator">comtypes.tools.codegenerator.codegenerator</a>
  &#8226;   <a href="#comtypes.tools.codegenerator.modulenamer">comtypes.tools.codegenerator.modulenamer</a>
@@ -5813,6 +5894,8 @@ imported by:
  &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
  &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
  &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.hresult">comtypes.hresult</a>
  &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
  &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
@@ -6057,6 +6140,8 @@ imported by:
  &#8226;   <a href="#comtypes.client._code_cache">comtypes.client._code_cache</a>
  &#8226;   <a href="#comtypes.client._events">comtypes.client._events</a>
  &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
  &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
  &#8226;   <a href="#comtypes.server">comtypes.server</a>
@@ -9335,6 +9420,7 @@ imported by:
  &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
  &#8226;   <a href="#asyncio.timeouts">asyncio.timeouts</a>
  &#8226;   <a href="#calendar">calendar</a>
+ &#8226;   <a href="#comtypes.gen.SpeechLib">comtypes.gen.SpeechLib</a>
  &#8226;   <a href="#flashcards.py">flashcards.py</a>
  &#8226;   <a href="#http">http</a>
  &#8226;   <a href="#inspect">inspect</a>
@@ -20220,6 +20306,7 @@ imported by:
 imports:
     <a href="#comtypes.client">comtypes.client</a>
  &#8226;   <a href="#comtypes.gen">comtypes.gen</a>
+ &#8226;   <a href="#comtypes.gen.SpeechLib">comtypes.gen.SpeechLib</a>
  &#8226;   <a href="#math">math</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pythoncom">pythoncom</a>
@@ -20360,6 +20447,23 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="quiz"></a>
+  <a target="code" href="///C:/Users/krato/OneDrive/Software%20Task%203/mainapp/quiz.py" type="text/plain"><tt>quiz</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#random">random</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#flashcards.py">flashcards.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="quopri"></a>
   <a target="code" href="///C:/Program%20Files/Python313/Lib/quopri.py" type="text/plain"><tt>quopri</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -20405,6 +20509,7 @@ imported by:
     <a href="#email.generator">email.generator</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#flashcards.py">flashcards.py</a>
+ &#8226;   <a href="#quiz">quiz</a>
  &#8226;   <a href="#secrets">secrets</a>
  &#8226;   <a href="#setuptools._vendor.more_itertools.more">setuptools._vendor.more_itertools.more</a>
  &#8226;   <a href="#setuptools._vendor.more_itertools.recipes">setuptools._vendor.more_itertools.recipes</a>
@@ -25615,6 +25720,7 @@ imported by:
  &#8226;   <a href="#encodings.utf_32">encodings.utf_32</a>
  &#8226;   <a href="#enum">enum</a>
  &#8226;   <a href="#fileinput">fileinput</a>
+ &#8226;   <a href="#flashcards.py">flashcards.py</a>
  &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#ftplib">ftplib</a>
  &#8226;   <a href="#getopt">getopt</a>
@@ -26136,6 +26242,7 @@ imports:
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#traceback">traceback</a>
  &#8226;   <a href="#types">types</a>
 
@@ -26143,7 +26250,26 @@ imports:
   <div class="import">
 imported by:
     <a href="#flashcards.py">flashcards.py</a>
+ &#8226;   <a href="#quiz">quiz</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.commondialog"></a>
+  <a target="code" href="///C:/Program%20Files/Python313/Lib/tkinter/commondialog.py" type="text/plain"><tt>tkinter.commondialog</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tkinter.messagebox">tkinter.messagebox</a>
 
   </div>
 
@@ -26160,6 +26286,24 @@ imports:
   <div class="import">
 imported by:
     <a href="#tkinter">tkinter</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="tkinter.messagebox"></a>
+  <a target="code" href="///C:/Program%20Files/Python313/Lib/tkinter/messagebox.py" type="text/plain"><tt>tkinter.messagebox</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#flashcards.py">flashcards.py</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
 
   </div>
 
@@ -26561,6 +26705,8 @@ imported by:
  &#8226;   <a href="#comtypes.client.dynamic">comtypes.client.dynamic</a>
  &#8226;   <a href="#comtypes.connectionpoints">comtypes.connectionpoints</a>
  &#8226;   <a href="#comtypes.errorinfo">comtypes.errorinfo</a>
+ &#8226;   <a href="#comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0">comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0</a>
+ &#8226;   <a href="#comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4">comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4</a>
  &#8226;   <a href="#comtypes.messageloop">comtypes.messageloop</a>
  &#8226;   <a href="#comtypes.persist">comtypes.persist</a>
  &#8226;   <a href="#comtypes.safearray">comtypes.safearray</a>
