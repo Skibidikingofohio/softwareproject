@@ -1,19 +1,57 @@
-# Mandarin Flashcard App 
+# Mandarin Flashcard App
 
-A **100% offline** Python desktop flashcard application built with Tkinter.  
-Features:
-- Flip-style flashcards with **word**, **pinyin**, and **meaning**
-- **Text-to-speech** pronunciation using `pyttsx3`
-- **Multiple-choice quizzes** for active recall
-- **Spaced Repetition System (SRS)** to review hard cards more frequently
-- **Persistent stats**: total answered, correct count, learned words
-- Packaged as an installable **`.exe`** with PyInstaller
+A curriculum-aligned flashcard learning tool built for HSC Mandarin students. The app uses spaced repetition, quiz features, and offline text-to-speech to support effective study.
 
 ---
 
-## 🛠 Setup & Run
+## Features
 
-1. Clone the repo:  
+- Interactive Flashcards: Flip cards to reveal Mandarin, English, and pinyin.
+- Quiz Mode: Multiple-choice questions to test vocabulary knowledge.
+- Spaced Repetition: Reinforces learning by adjusting review schedules.
+- Text-to-Speech: Offline pronunciation using gTTS and pygame.
+- Progress Tracking: Tracks performance across categories.
+- Standalone Executable: Can run without installing Python.
+
+---
+
+## How to Run
+# Download Dependencies
+tkinter (included with Python)
+
+gTTS
+
+pygame
+
+Install via:
+
+bash
+Copy
+Edit
+pip install gtts pygame
+
+# To run
+### If using Python:
+
+1. Install dependencies:
+
    ```bash
-   git clone https://github.com/
-   cd your-repo
+   pip install gtts pygame
+
+2. Run the application:
+
+bash
+Copy
+Edit
+python mainapp/flashcards.py
+
+If using the EXE version:
+Open the dist/ folder.
+
+Double-click flashcards.exe.
+
+Author
+Kray Siason III
+HSC Year 12 Software Engineering Project
+Mandarin Vocabulary Learning Tool
+
