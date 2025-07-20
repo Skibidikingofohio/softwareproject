@@ -12,35 +12,62 @@ def run_quiz(app, card, callback):
         for widget in app.choices_frame.winfo_children():
             widget.destroy()
         
+        # Debug: Print the card data to understand structure
+        print(f"DEBUG: Card data = {card}")
+        
         # Set question with better formatting
         question_text = f"What does '{card['word']}' ({card['pinyin']}) mean?"
         app.question.config(text=question_text)
         
         # Get correct answer
         correct_answer = card['meaning']
+        print(f"DEBUG: Correct answer = '{correct_answer}'")
         
         # Check if we have enough cards for multiple choice
         available_cards = [c for c in app.cards if c['meaning'] != correct_answer]
+        print(f"DEBUG: Available cards for wrong answers: {len(available_cards)}")
         
-        if len(available_cards) < 2:
+        if len(available_cards) < 3:
             # Not enough cards for multiple choice - show direct answer
+            print("DEBUG: Not enough cards, showing direct answer")
             _show_direct_answer(app, card, callback)
             return
         
-        # Generate wrong answers
+        # Generate wrong answers - improved logic
         wrong_answers = []
-        attempts = 0
-        max_attempts = 50  # Prevent infinite loops
+        shuffled_cards = available_cards.copy()
+        random.shuffle(shuffled_cards)
         
-        while len(wrong_answers) < 3 and attempts < max_attempts:
-            random_card = random.choice(available_cards)
-            if random_card['meaning'] not in wrong_answers:
-                wrong_answers.append(random_card['meaning'])
-            attempts += 1
+        # Take first 3 unique meanings
+        for wrong_card in shuffled_cards:
+            if wrong_card['meaning'] not in wrong_answers and wrong_card['meaning'] != correct_answer:
+                wrong_answers.append(wrong_card['meaning'])
+                if len(wrong_answers) >= 3:
+                    break
         
-        # Create options list
-        options = [correct_answer] + wrong_answers
+        print(f"DEBUG: Wrong answers = {wrong_answers}")
+        
+        # Fallback if we still don't have enough wrong answers
+        if len(wrong_answers) < 3:
+            print("DEBUG: Still not enough wrong answers, showing direct answer")
+            _show_direct_answer(app, card, callback)
+            return
+        
+        # Create options list with exactly 4 choices
+        options = [correct_answer] + wrong_answers[:3]  # Ensure exactly 3 wrong answers
         random.shuffle(options)
+        
+        # Debug print
+        print(f"Quiz for: {card['word']} ({card['pinyin']})")
+        print(f"Correct answer: '{correct_answer}'")
+        print(f"All options: {options}")
+        print(f"Correct answer in options: {correct_answer in options}")
+        
+        # Verify correct answer is in options (safety check)
+        if correct_answer not in options:
+            print("ERROR: Correct answer not in options! Fixing...")
+            options[0] = correct_answer
+            random.shuffle(options)
         
         # Create choice buttons with better styling
         button_style = {
@@ -55,7 +82,7 @@ def run_quiz(app, card, callback):
             'cursor': 'hand2'
         }
         
-        # Create buttons in a grid for better layout
+        # Create buttons in a 2x2 grid
         for i, option in enumerate(options):
             row = i // 2
             col = i % 2
@@ -92,6 +119,8 @@ def run_quiz(app, card, callback):
         
     except Exception as e:
         print(f"Quiz generation error: {e}")
+        import traceback
+        traceback.print_exc()
         _show_error_fallback(app, card, callback)
 
 def _show_direct_answer(app, card, callback):
@@ -141,19 +170,24 @@ def _handle_answer(app, selected_option, card, callback):
     try:
         # Disable all buttons to prevent multiple clicks
         for widget in app.choices_frame.winfo_children():
-            if isinstance(widget, tk.Button):
+            if isinstance(widget, tk.Button) and "Show Answer" not in widget.cget('text'):
                 widget.config(state='disabled')
         
         # Visual feedback
         correct_answer = card['meaning']
         is_correct = selected_option == correct_answer
         
+        print(f"Selected: {selected_option}")
+        print(f"Correct: {correct_answer}")
+        print(f"Is correct: {is_correct}")
+        
         # Update button colors
         for widget in app.choices_frame.winfo_children():
-            if isinstance(widget, tk.Button) and widget.cget('text') in [selected_option, correct_answer]:
-                if widget.cget('text') == correct_answer:
+            if isinstance(widget, tk.Button) and "Show Answer" not in widget.cget('text'):
+                button_text = widget.cget('text')
+                if button_text == correct_answer:
                     widget.config(bg='#4caf50', fg='white')  # Green for correct
-                elif widget.cget('text') == selected_option and not is_correct:
+                elif button_text == selected_option and not is_correct:
                     widget.config(bg='#f44336', fg='white')  # Red for wrong selection
         
         # Small delay before proceeding
@@ -168,7 +202,7 @@ def _show_correct_answer(app, correct_answer):
     for widget in app.choices_frame.winfo_children():
         if isinstance(widget, tk.Button) and widget.cget('text') == correct_answer:
             widget.config(bg='#4caf50', fg='white')
-            widget.config(text=f"✅ {correct_answer}")
+            # Don't modify the text to avoid confusion
             break
 
 def _show_error_fallback(app, card, callback):
@@ -195,4 +229,4 @@ def _show_error_fallback(app, card, callback):
         pady=8
     )
     continue_btn.pack(pady=10)
-
+    
